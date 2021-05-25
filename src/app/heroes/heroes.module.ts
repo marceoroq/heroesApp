@@ -9,6 +9,8 @@ import { DetailsComponent } from './pages/details/details.component';
 import { SearchComponent } from './pages/search/search.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AddComponent } from './pages/add/add.component';
+import { HeroeCardComponent } from './components/heroe-card/heroe-card.component';
+import { ImagePipe } from './pipes/image.pipe';
 
 @NgModule({
     declarations: [
@@ -16,7 +18,9 @@ import { AddComponent } from './pages/add/add.component';
         SearchComponent,
         DetailsComponent,
         HomeComponent,
-        CatalogueComponent
+        CatalogueComponent,
+        HeroeCardComponent,
+        ImagePipe
     ],
     imports: [
         CommonModule,
