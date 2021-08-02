@@ -11,6 +11,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AddComponent } from './pages/add/add.component';
 import { HeroeCardComponent } from './components/heroe-card/heroe-card.component';
 import { ImagePipe } from './pipes/image.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -26,7 +27,8 @@ import { ImagePipe } from './pipes/image.pipe';
         CommonModule,
         HeroesRoutingModule,
         FlexLayoutModule,
-        AngularMaterialModule
+        AngularMaterialModule,
+        FormsModule
     ]
 })
 export class HeroesModule {}
