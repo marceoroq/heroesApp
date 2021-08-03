@@ -1,1 +1,28 @@
-<p>details works!</p>
+<mat-grid-list cols="1" *ngIf="!heroe; else divHeroe">
+    <mat-grid-tile>
+        <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<ng-template #divHeroe>
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutGap="30px">
+        <div fxFlex="50">
+            <h1>{{ heroe.superhero }}<small> - {{ heroe.alter_ego }}</small></h1>
+            <mat-divider></mat-divider>
+            <br>
+            <img [src]="heroe | image">
+        </div>
+        <div fxFlex="50">
+            <h1><strong>Publisher: </strong>{{heroe.publisher}}</h1>
+            <mat-divider></mat-divider>
+            <mat-list>
+                <mat-list-item><p><strong>First Appearance: </strong>{{ heroe.first_appearance }}</p></mat-list-item>
+                <mat-list-item><p><strong>Characters: </strong>{{ heroe.characters }}</p></mat-list-item>
+                <mat-list-item><p><strong>Alter Ego: </strong>{{ heroe.alter_ego }}</p></mat-list-item>
+                <button mat-stroked-button color="warn" [routerLink]="['/heroes/catalogue']">
+                    <mat-icon>arrow_back</mat-icon> Return
+                </button>
+            </mat-list>
+        </div>
+    </div>
+</ng-template>

@@ -12,8 +12,8 @@ const routes: Routes = [
         {path: 'add', component: AddComponent },
         {path: 'edit/:id', component: AddComponent},
         {path: 'search', component: SearchComponent},
-        {path: 'details', component: DetailsComponent},
         {path: 'catalogue', component: CatalogueComponent},
+        {path: 'details/:id', component: DetailsComponent},
         {path: '**', redirectTo: 'catalogue'}
     ]}
 ]

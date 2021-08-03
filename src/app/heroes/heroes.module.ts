@@ -1,12 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AddComponent } from './pages/add/add.component';
-import { HomeComponent } from './pages/home/home.component';
-import { SearchComponent } from './pages/search/search.component';
-import { DetailsComponent } from './pages/details/details.component';
-import { CatalogueComponent } from './pages/catalogue/catalogue.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeroesRoutingModule } from './heroes-routing.module';
+import { AngularMaterialModule } from '../angular-material/angular-material.module';
 
+import { CatalogueComponent } from './pages/catalogue/catalogue.component';
+import { DetailsComponent } from './pages/details/details.component';
+import { SearchComponent } from './pages/search/search.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AddComponent } from './pages/add/add.component';
+import { HeroeCardComponent } from './components/heroe-card/heroe-card.component';
+import { ImagePipe } from './pipes/image.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -14,8 +19,16 @@ import { HeroesRoutingModule } from './heroes-routing.module';
         SearchComponent,
         DetailsComponent,
         HomeComponent,
-        CatalogueComponent
+        CatalogueComponent,
+        HeroeCardComponent,
+        ImagePipe
     ],
-    imports: [CommonModule, HeroesRoutingModule]
+    imports: [
+        CommonModule,
+        HeroesRoutingModule,
+        FlexLayoutModule,
+        AngularMaterialModule,
+        FormsModule
+    ]
 })
 export class HeroesModule {}

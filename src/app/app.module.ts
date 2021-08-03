@@ -5,10 +5,11 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 import { AppRouterModule } from './app-router.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
     declarations: [AppComponent, ErrorPageComponent],
-    imports: [BrowserModule, BrowserAnimationsModule, AppRouterModule],
+    imports: [BrowserModule, BrowserAnimationsModule, AppRouterModule, HttpClientModule],
     bootstrap: [AppComponent]
 })
 export class AppModule {}

@@ -1,1 +1,9 @@
-<p>catalogue works!</p>
+<h1>Heroes Catalogue</h1>
+<mat-divider></mat-divider>
+<br>
+
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="center strech">
+    <div fxFlex="15" fxFlex.lg="25" fxFlex.md="33" fxFlex.sm="50" *ngFor="let heroe of heroes">
+        <app-heroe-card [heroe]="heroe"></app-heroe-card>
+    </div>
+</div>
