@@ -2,9 +2,6 @@
     <mat-sidenav #sidenav mode="push">
         <mat-toolbar color="primary">
             <span>Menu</span>
-            <!-- <button mat-icon-button (click)="sidenav.toggle()">
-                <mat-icon>menu</mat-icon>
-            </button> -->
         </mat-toolbar>
 
         <mat-nav-list>
@@ -28,7 +25,8 @@
             <mat-icon>menu</mat-icon>
         </button>
         <span class="spaicer"></span>
-        <button mat-raised-button>
+        <span>{{ userLogged.usuario }}</span> 
+        <button (click)="logout()" mat-raised-button>
             Logout
         </button>
     </mat-toolbar>
